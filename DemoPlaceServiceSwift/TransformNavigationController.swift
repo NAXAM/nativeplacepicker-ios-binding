@@ -67,15 +67,7 @@ class TransformNavigationController: UINavigationController {
             })
         }
     }
-    
-    var bottomViewConstant: CGFloat! {
-        get {
-            return mapContainerVC?.bottomSheetViewConstant
-        }
-        set {
-            mapContainerVC?.bottomSheetViewConstant = newValue
-        }
-    }
+
     
     
     override func viewDidLoad() {
@@ -94,7 +86,6 @@ class TransformNavigationController: UINavigationController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         topConstant = middleTopConstant
-        bottomViewConstant = middleTopConstant * 0.35555
     }
 
     func setTopConstraint(velocityY: CGFloat) {

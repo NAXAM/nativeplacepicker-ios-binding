@@ -49,15 +49,6 @@ class PopUpUserPlace: UIViewController {
         guard let placemark = placemark else { return}
         nameLocationLabel.text = placemark.name
         addressLocationLabel.text = parseAddress(selectedItem: placemark)
-        
-      /*  self.view.backgroundColor = UIColor.clear
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        //always fill the view
-        blurEffectView.frame = self.view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        self.view.insertSubview(blurEffectView, at: 0)*/
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,13 +9,13 @@
 import Foundation
 
 extension Notification.Name {
-    static let displayingModeDidChange                 = Notification.Name("displayingModeDidChange")
+    static let displayingModeDidChange = Notification.Name("displayingModeDidChange")
     
 }
 
 struct SegueIdentifier {
-    static let embedMapVC                       = "embedMapVC"
-    static let embedSearchPlaceVC               = "embedSearchPlaceVC"
+    static let embedMapVC = "embedMapVC"
+    static let embedSearchPlaceVC = "embedSearchPlaceVC"
     static let showLocationSearch = "showLocationSearch"
     static let showPopupUserPlace = "showPopupUserPlace"
 }
