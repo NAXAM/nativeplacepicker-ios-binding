@@ -1,0 +1,6 @@
+framework module NXPlacePicker {
+  umbrella header "NXPlacePicker.h"
+
+  export *
+  module * { export * }
+}

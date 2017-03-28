@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		011911D31E88F6E300EB5D42 /* NXPlacePickerlib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 011911D41E88F6E300EB5D42 /* Build configuration list for PBXAggregateTarget "NXPlacePickerlib" */;
+			buildPhases = (
+				011912011E88FDB300EB5D42 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = NXPlacePickerlib;
+			productName = NXPlacePickerlib;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		011888C31E88CA6100C3558E /* NXPlacePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011888BC1E88CA6100C3558E /* NXPlacePicker.framework */; };
+		011888C41E88CA6100C3558E /* NXPlacePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 011888BC1E88CA6100C3558E /* NXPlacePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		011912091E8916D900EB5D42 /* NXPlacePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912021E8916D900EB5D42 /* NXPlacePicker.h */; };
+		0119120A1E8916D900EB5D42 /* NXPlacePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912031E8916D900EB5D42 /* NXPlacePickerViewController.h */; };
+		0119120B1E8916D900EB5D42 /* NXPlacePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011912041E8916D900EB5D42 /* NXPlacePickerViewController.m */; };
+		0119120C1E8916D900EB5D42 /* PopUpUserPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912051E8916D900EB5D42 /* PopUpUserPlace.h */; };
+		0119120D1E8916D900EB5D42 /* PopUpUserPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 011912061E8916D900EB5D42 /* PopUpUserPlace.m */; };
+		0119120E1E8916D900EB5D42 /* SearchPlaceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912071E8916D900EB5D42 /* SearchPlaceViewController.h */; };
+		0119120F1E8916D900EB5D42 /* SearchPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011912081E8916D900EB5D42 /* SearchPlaceViewController.m */; };
+		011912151E8916ED00EB5D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011912101E8916ED00EB5D42 /* Assets.xcassets */; };
+		011912161E8916ED00EB5D42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011912121E8916ED00EB5D42 /* Main.storyboard */; };
+		011912171E8916ED00EB5D42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 011912141E8916ED00EB5D42 /* Info.plist */; };
+		011912181E8917A500EB5D42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 011912141E8916ED00EB5D42 /* Info.plist */; };
+		011912191E8917BE00EB5D42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 019FA8111E88C3A50083200F /* Info.plist */; };
+		0119121A1E8917BE00EB5D42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 019FA8111E88C3A50083200F /* Info.plist */; };
+		019FA8061E88C3A50083200F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019FA8051E88C3A50083200F /* AppDelegate.swift */; };
+		019FA8081E88C3A50083200F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019FA8071E88C3A50083200F /* ViewController.swift */; };
+		019FA80B1E88C3A50083200F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019FA8091E88C3A50083200F /* Main.storyboard */; };
+		019FA80D1E88C3A50083200F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019FA80C1E88C3A50083200F /* Assets.xcassets */; };
+		019FA8101E88C3A50083200F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019FA80E1E88C3A50083200F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		011888C11E88CA6100C3558E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 019FA7EB1E88C38B0083200F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 011888BB1E88CA6100C3558E;
+			remoteInfo = NXPlacePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		011888C81E88CA6100C3558E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				011888C41E88CA6100C3558E /* NXPlacePicker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		011888BC1E88CA6100C3558E /* NXPlacePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NXPlacePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		011888E21E88CD5A00C3558E /* NXPlacePickerQs-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NXPlacePickerQs-Bridging-Header.h"; sourceTree = "<group>"; };
+		011912021E8916D900EB5D42 /* NXPlacePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXPlacePicker.h; path = NXPlacePicker/NXPlacePicker.h; sourceTree = "<group>"; };
+		011912031E8916D900EB5D42 /* NXPlacePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXPlacePickerViewController.h; path = NXPlacePicker/NXPlacePickerViewController.h; sourceTree = "<group>"; };
+		011912041E8916D900EB5D42 /* NXPlacePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXPlacePickerViewController.m; path = NXPlacePicker/NXPlacePickerViewController.m; sourceTree = "<group>"; };
+		011912051E8916D900EB5D42 /* PopUpUserPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopUpUserPlace.h; path = NXPlacePicker/PopUpUserPlace.h; sourceTree = "<group>"; };
+		011912061E8916D900EB5D42 /* PopUpUserPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopUpUserPlace.m; path = NXPlacePicker/PopUpUserPlace.m; sourceTree = "<group>"; };
+		011912071E8916D900EB5D42 /* SearchPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPlaceViewController.h; path = NXPlacePicker/SearchPlaceViewController.h; sourceTree = "<group>"; };
+		011912081E8916D900EB5D42 /* SearchPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPlaceViewController.m; path = NXPlacePicker/SearchPlaceViewController.m; sourceTree = "<group>"; };
+		011912101E8916ED00EB5D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = NXPlacePicker/Assets.xcassets; sourceTree = "<group>"; };
+		011912131E8916ED00EB5D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		011912141E8916ED00EB5D42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NXPlacePicker/Info.plist; sourceTree = "<group>"; };
+		019FA8031E88C3A50083200F /* NXPlacePickerQs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NXPlacePickerQs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		019FA8051E88C3A50083200F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		019FA8071E88C3A50083200F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		019FA80A1E88C3A50083200F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		019FA80C1E88C3A50083200F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		019FA80F1E88C3A50083200F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		019FA8111E88C3A50083200F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		011888B81E88CA6100C3558E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019FA8001E88C3A50083200F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011888C31E88CA6100C3558E /* NXPlacePicker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		011888BD1E88CA6100C3558E /* NXPlacePicker */ = {
+			isa = PBXGroup;
+			children = (
+				011912101E8916ED00EB5D42 /* Assets.xcassets */,
+				011912111E8916ED00EB5D42 /* Base.lproj */,
+				011912141E8916ED00EB5D42 /* Info.plist */,
+				011912021E8916D900EB5D42 /* NXPlacePicker.h */,
+				011912031E8916D900EB5D42 /* NXPlacePickerViewController.h */,
+				011912041E8916D900EB5D42 /* NXPlacePickerViewController.m */,
+				011912051E8916D900EB5D42 /* PopUpUserPlace.h */,
+				011912061E8916D900EB5D42 /* PopUpUserPlace.m */,
+				011912071E8916D900EB5D42 /* SearchPlaceViewController.h */,
+				011912081E8916D900EB5D42 /* SearchPlaceViewController.m */,
+			);
+			path = NXPlacePicker;
+			sourceTree = "<group>";
+		};
+		011912111E8916ED00EB5D42 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				011912121E8916ED00EB5D42 /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = NXPlacePicker/Base.lproj;
+			sourceTree = "<group>";
+		};
+		019FA7EA1E88C38B0083200F = {
+			isa = PBXGroup;
+			children = (
+				019FA8041E88C3A50083200F /* NXPlacePickerQs */,
+				011888BD1E88CA6100C3558E /* NXPlacePicker */,
+				019FA7F41E88C38B0083200F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		019FA7F41E88C38B0083200F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				019FA8031E88C3A50083200F /* NXPlacePickerQs.app */,
+				011888BC1E88CA6100C3558E /* NXPlacePicker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		019FA8041E88C3A50083200F /* NXPlacePickerQs */ = {
+			isa = PBXGroup;
+			children = (
+				011888E21E88CD5A00C3558E /* NXPlacePickerQs-Bridging-Header.h */,
+				019FA8051E88C3A50083200F /* AppDelegate.swift */,
+				019FA8071E88C3A50083200F /* ViewController.swift */,
+				019FA8091E88C3A50083200F /* Main.storyboard */,
+				019FA80C1E88C3A50083200F /* Assets.xcassets */,
+				019FA80E1E88C3A50083200F /* LaunchScreen.storyboard */,
+				019FA8111E88C3A50083200F /* Info.plist */,
+			);
+			path = NXPlacePickerQs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		011888B91E88CA6100C3558E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0119120E1E8916D900EB5D42 /* SearchPlaceViewController.h in Headers */,
+				0119120A1E8916D900EB5D42 /* NXPlacePickerViewController.h in Headers */,
+				0119120C1E8916D900EB5D42 /* PopUpUserPlace.h in Headers */,
+				011912091E8916D900EB5D42 /* NXPlacePicker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		011888BB1E88CA6100C3558E /* NXPlacePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 011888C51E88CA6100C3558E /* Build configuration list for PBXNativeTarget "NXPlacePicker" */;
+			buildPhases = (
+				011888B71E88CA6100C3558E /* Sources */,
+				011888B81E88CA6100C3558E /* Frameworks */,
+				011888B91E88CA6100C3558E /* Headers */,
+				011888BA1E88CA6100C3558E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NXPlacePicker;
+			productName = NXPlacePicker;
+			productReference = 011888BC1E88CA6100C3558E /* NXPlacePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		019FA8021E88C3A50083200F /* NXPlacePickerQs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019FA8121E88C3A50083200F /* Build configuration list for PBXNativeTarget "NXPlacePickerQs" */;
+			buildPhases = (
+				019FA7FF1E88C3A50083200F /* Sources */,
+				019FA8001E88C3A50083200F /* Frameworks */,
+				019FA8011E88C3A50083200F /* Resources */,
+				011888C81E88CA6100C3558E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				011888C21E88CA6100C3558E /* PBXTargetDependency */,
+			);
+			name = NXPlacePickerQs;
+			productName = NXPlacePickerQs;
+			productReference = 019FA8031E88C3A50083200F /* NXPlacePickerQs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		019FA7EB1E88C38B0083200F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = NAXAM;
+				TargetAttributes = {
+					011888BB1E88CA6100C3558E = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 5VNQ389A9X;
+						ProvisioningStyle = Automatic;
+					};
+					011911D31E88F6E300EB5D42 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 5VNQ389A9X;
+						ProvisioningStyle = Automatic;
+					};
+					019FA8021E88C3A50083200F = {
+						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 019FA7EE1E88C38B0083200F /* Build configuration list for PBXProject "NXPlacePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 019FA7EA1E88C38B0083200F;
+			productRefGroup = 019FA7F41E88C38B0083200F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				019FA8021E88C3A50083200F /* NXPlacePickerQs */,
+				011888BB1E88CA6100C3558E /* NXPlacePicker */,
+				011911D31E88F6E300EB5D42 /* NXPlacePickerlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		011888BA1E88CA6100C3558E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011912191E8917BE00EB5D42 /* Info.plist in Resources */,
+				011912151E8916ED00EB5D42 /* Assets.xcassets in Resources */,
+				011912161E8916ED00EB5D42 /* Main.storyboard in Resources */,
+				011912171E8916ED00EB5D42 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019FA8011E88C3A50083200F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011912181E8917A500EB5D42 /* Info.plist in Resources */,
+				019FA8101E88C3A50083200F /* LaunchScreen.storyboard in Resources */,
+				019FA80D1E88C3A50083200F /* Assets.xcassets in Resources */,
+				0119121A1E8917BE00EB5D42 /* Info.plist in Resources */,
+				019FA80B1E88C3A50083200F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		011912011E88FDB300EB5D42 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      OUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR\"\n                                                                      mkdir -p \"$OUTPUT_DIR\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n                                                                      \n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${OUTPUT_DIR}/\"\n                                                                      fi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		011888B71E88CA6100C3558E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0119120D1E8916D900EB5D42 /* PopUpUserPlace.m in Sources */,
+				0119120B1E8916D900EB5D42 /* NXPlacePickerViewController.m in Sources */,
+				0119120F1E8916D900EB5D42 /* SearchPlaceViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019FA7FF1E88C3A50083200F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019FA8081E88C3A50083200F /* ViewController.swift in Sources */,
+				019FA8061E88C3A50083200F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		011888C21E88CA6100C3558E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 011888BB1E88CA6100C3558E /* NXPlacePicker */;
+			targetProxy = 011888C11E88CA6100C3558E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		011912121E8916ED00EB5D42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				011912131E8916ED00EB5D42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		019FA8091E88C3A50083200F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				019FA80A1E88C3A50083200F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		019FA80E1E88C3A50083200F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				019FA80F1E88C3A50083200F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		011888C61E88CA6100C3558E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5VNQ389A9X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/NXPlacePicker/NXPlacePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = net.naxam.NXPlacePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		011888C71E88CA6100C3558E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5VNQ389A9X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/NXPlacePicker/NXPlacePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.naxam.NXPlacePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		011911D51E88F6E300EB5D42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5VNQ389A9X;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		011911D61E88F6E300EB5D42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5VNQ389A9X;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		019FA7FA1E88C38B0083200F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		019FA7FB1E88C38B0083200F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		019FA8131E88C3A50083200F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NXPlacePickerQs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.naxam.NXPlacePickerQs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "NXPlacePickerQs/NXPlacePickerQs-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		019FA8141E88C3A50083200F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NXPlacePickerQs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.naxam.NXPlacePickerQs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NXPlacePickerQs/NXPlacePickerQs-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		011888C51E88CA6100C3558E /* Build configuration list for PBXNativeTarget "NXPlacePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011888C61E88CA6100C3558E /* Debug */,
+				011888C71E88CA6100C3558E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		011911D41E88F6E300EB5D42 /* Build configuration list for PBXAggregateTarget "NXPlacePickerlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011911D51E88F6E300EB5D42 /* Debug */,
+				011911D61E88F6E300EB5D42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019FA7EE1E88C38B0083200F /* Build configuration list for PBXProject "NXPlacePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019FA7FA1E88C38B0083200F /* Debug */,
+				019FA7FB1E88C38B0083200F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019FA8121E88C3A50083200F /* Build configuration list for PBXNativeTarget "NXPlacePickerQs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019FA8131E88C3A50083200F /* Debug */,
+				019FA8141E88C3A50083200F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 019FA7EB1E88C38B0083200F /* Project object */;
+}
