@@ -11,13 +11,19 @@
 
 @protocol NxPlacePickedConfirmationDelegate <NSObject>
 
--(void) didConfirmPlace:(MKPlacemark *)placemark;
+-(void) viewController: (nonnull UIViewController*) viewController didConfirmPlace:(nonnull MKPlacemark *)placemark;
 
 @end
 
 @interface NXPlacePickedConfirmationViewController : UIViewController
 
-@property (nonatomic, strong) MKPlacemark* mkPlacemark;
-@property (nonatomic, weak) id<NxPlacePickedConfirmationDelegate> delegate;
+@property (nonatomic, strong, nonnull) MKPlacemark* mkPlacemark;
+@property (nonatomic, weak, nullable) id<NxPlacePickedConfirmationDelegate> delegate;
+
+@end
+
+@interface MKPlacemark (Formatter)
+
+- (nonnull NSString*) formattedAddress;
 
 @end

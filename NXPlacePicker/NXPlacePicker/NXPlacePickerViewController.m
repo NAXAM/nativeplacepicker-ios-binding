@@ -21,7 +21,7 @@ typedef enum {
 
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
-@interface NXPlacePickerViewController () <UIGestureRecognizerDelegate, NXPlaceSearchDelegate, NxPlacePickedConfirmationDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
+@interface NXPlacePickerViewController () <UIGestureRecognizerDelegate, NxPlacePickedConfirmationDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topBottomSheetConstraint;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewNearby;
@@ -131,7 +131,18 @@ CGFloat newTopConstant;
 }
 
 - (IBAction)showCurrentLocation:(UIButton *)sender {
-    [self didConfirmPlace:self.selectedPin];
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    annotation.coordinate = self.selectedPin.coordinate;
+    annotation.title = self.selectedPin.name;
+    
+    NSString *cityAndState = [NSString stringWithFormat:@"%@ %@",[self.selectedPin locality], [self.selectedPin locality]];
+    
+    annotation.subtitle = cityAndState;
+    [self.mapView addAnnotation:annotation];
+    
+    [self.mapView setRegion:MKCoordinateRegionMake(self.selectedPin.coordinate, MKCoordinateSpanMake(0.05, 0.05))
+                   animated:true];
 }
 
 -(void)getAddressFromLocation:(CLLocation *)location {
@@ -139,7 +150,8 @@ CGFloat newTopConstant;
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error)
      {
          if (!placemarks) {
-             // handle error
+             // TOODO handle error
+             return;
          }
          
          if(placemarks && placemarks.count > 0)
@@ -151,30 +163,19 @@ CGFloat newTopConstant;
              [array addObject:mkPlacemark];
              self.placemarks = array;
              self.selectedPin = mkPlacemark;
-             [self didConfirmPlace:mkPlacemark];
              [self.tableViewNearby reloadData];
          }
      }];
 }
 
--(void) didConfirmPlace:(MKPlacemark *)placemark {
-    self.selectedPin = placemark;
-    [self.mapView removeAnnotations:self.mapView.annotations];
-    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-    annotation.coordinate = placemark.coordinate;
-    annotation.title = placemark.name;
-    
-    NSString *cityAndState = [NSString stringWithFormat:@"%@ %@",[placemark locality], [placemark locality]];
-    
-    annotation.subtitle = cityAndState;
-    [self.mapView addAnnotation:annotation];
-    
-    [self.mapView setRegion:MKCoordinateRegionMake(placemark.coordinate, MKCoordinateSpanMake(0.05, 0.05)) animated:true];
-    
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(placePicker:didSelectPlace:)])
-    {
-        [self.delegate placePicker:self didSelectPlace: placemark];
-    }
+-(void) viewController: (UIViewController*) viewController didConfirmPlace:(MKPlacemark *)placemark {
+    __weak NXPlacePickerViewController* wSelf = self;
+    [viewController dismissViewControllerAnimated:true completion:^{
+        if (wSelf.delegate != nil && [wSelf.delegate respondsToSelector:@selector(placePicker:didSelectPlace:)])
+        {
+            [wSelf.delegate placePicker:wSelf didSelectPlace: wSelf.selectedPin];
+        }
+    }];
 }
 
 // CLLocationManagerDelegate
@@ -242,13 +243,13 @@ CGFloat newTopConstant;
 -(void) setTopConstraint: (CGFloat) velocityY
 {
     
-        if (velocityY > minVelocity)
-        {
-            [self setTopContant:self.middleTopConstant];
-        } else {
-            [self setTopContant:fullScreenTopConstant];
-            self.tableViewNearby.allowsSelection = true;
-        }
+    if (velocityY > minVelocity)
+    {
+        [self setTopContant:self.middleTopConstant];
+    } else {
+        [self setTopContant:fullScreenTopConstant];
+        self.tableViewNearby.allowsSelection = true;
+    }
 
 }
 
@@ -298,7 +299,7 @@ CGFloat newTopConstant;
     MKPlacemark *item = self.placemarks[indexPath.row];
     
     cell.textLabel.text = item.name;
-    cell.detailTextLabel.text = item.addressDictionary[@"Street"];
+    cell.detailTextLabel.text = [item formattedAddress];
     return cell;
 }
 

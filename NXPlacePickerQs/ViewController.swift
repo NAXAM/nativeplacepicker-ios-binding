@@ -7,10 +7,19 @@
 //
 
 import UIKit
-
+import AddressBookUI
 
 class ViewController: UIViewController , NXPlacePickerDelegate{
 
+    @IBOutlet weak var btnPickPlace: UIButton!
+    @IBOutlet weak var lblSelectedPlace: UILabel!
+    
+    @IBAction func doPickPlace(_ sender: UIButton) {
+        let vc = NXPlacePickerViewController.initWith(self)
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,20 +33,12 @@ class ViewController: UIViewController , NXPlacePickerDelegate{
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        let s = UIStoryboard (
-//            name: "Main", bundle: Bundle(for: NXPlacePickerViewController.self)
-//        )
-//        let vc = s.instantiateInitialViewController() as! NXPlacePickerViewController
-
-        let vc = NXPlacePickerViewController.initWith(nil)
-        vc?.delegate = self
-        
-        self.present(vc!, animated: true, completion: nil)
     }
     
     // NXPlacePickerDelegate
-    func placePicker(_ viewController: NXPlacePickerViewController!, didSelectPlace place: MKPlacemark!) {
+    func placePicker(_ viewController: NXPlacePickerViewController, didSelectPlace place: MKPlacemark) {
+        viewController.dismiss(animated: true, completion: nil)
+        lblSelectedPlace.text = ABCreateStringWithAddressDictionary(place.addressDictionary!, false)
         print(place)
     }
     

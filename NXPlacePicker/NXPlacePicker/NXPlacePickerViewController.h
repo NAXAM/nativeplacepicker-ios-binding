@@ -14,15 +14,15 @@
 
 @protocol NXPlacePickerDelegate <NSObject>
 
-- (void) placePicker: (NXPlacePickerViewController *) viewController
-                             didSelectPlace: (MKPlacemark *) place;
+- (void) placePicker: (nonnull NXPlacePickerViewController *) viewController
+      didSelectPlace: (nonnull MKPlacemark *) place;
 
 @end
 
 @interface NXPlacePickerViewController : UIViewController <MKMapViewDelegate>
 
-@property (weak) id<NXPlacePickerDelegate> delegate;
+@property (weak, nullable) id<NXPlacePickerDelegate> delegate;
 
-+ (instancetype) initWithDelegate: (id<NXPlacePickerDelegate>) delegate;
++ (nonnull instancetype) initWithDelegate: (nullable id<NXPlacePickerDelegate>) delegate;
 
 @end

@@ -6,7 +6,7 @@ using ObjCRuntime;
 using CoreGraphics;
 using MapKit;
 
-namespace NXPlacePicker
+namespace Naxam.iOS.PlacePicker
 {
 	// The first step to creating a binding is to add your native library ("libNativeLibrary.a")
 	// to the project by right-clicking (or Control-clicking) the folder containing this source
@@ -66,31 +66,55 @@ namespace NXPlacePicker
 	//
 
 	// @protocol NXPlacePickerDelegate <NSObject>
+    /// <summary>
+    /// Delegate for NXPlacePickerViewController
+    /// </summary>
 	[Protocol, Model]
 	[BaseType(typeof(NSObject))]
 	interface NXPlacePickerDelegate
 	{
 		// @required -(void)placePicker:(NXPlacePickerViewController *)viewController didSelectPlace:(MKPlacemark *)place;
+		/// <summary>
+		/// To be called when a place is picked
+		/// </summary>
+		/// <param name="viewController">View controller.</param>
+		/// <param name="place">Place.</param>
 		[Abstract]
 		[Export("placePicker:didSelectPlace:")]
 		void DidSelectPlace(NXPlacePickerViewController viewController, MKPlacemark place);
 	}
 
 	// @interface NXPlacePickerViewController : UIViewController <MKMapViewDelegate>
+    /// <summary>
+    /// A view controller for user to select a place, start searching for a place.
+    /// </summary>
 	[BaseType(typeof(UIViewController))]
 	interface NXPlacePickerViewController : IMKMapViewDelegate
 	{
-		[Wrap("WeakDelegate")]
+        /// <summary>
+        /// NXPlacePickerDelegate
+        /// </summary>
+        /// <value>The delegate.</value>
+		[NullAllowed, Wrap("WeakDelegate")]
 		NSObject Delegate { get; set; }
 
 		// @property (weak) id<NXPlacePickerDelegate> delegate;
+		/// <summary>
+		/// Weak Delegate for NXPlacePickerDelegate
+		/// </summary>
+		/// <value>The delegate.</value>
 		[NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
 		NSObject WeakDelegate { get; set; }
 
 		// +(instancetype)initWithDelegate:(id<NXPlacePickerDelegate>)delegate;
+        /// <summary>
+        /// Create a new instance of NXPlacePickerViewController
+        /// </summary>
+        /// <returns>The with delegate.</returns>
+        /// <param name="delegate">Delegate.</param>
 		[Static]
 		[Export("initWithDelegate:")]
-		NXPlacePickerViewController InitWithDelegate(INXPlacePickerDelegate @delegate);
+		NXPlacePickerViewController InitWithDelegate([NullAllowed] INXPlacePickerDelegate @delegate);
 	}
 
 	public partial interface INXPlacePickerDelegate : INativeObject { }

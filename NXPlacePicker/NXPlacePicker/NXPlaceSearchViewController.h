@@ -8,17 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-
-@protocol NXPlaceSearchDelegate <NSObject>
-
-@required
--(void) didConfirmPlace:(MKPlacemark *)placemark;
-
-@end
+#import "NXPlacePickedConfirmationViewController.h"
 
 @interface NXPlaceSearchViewController : UITableViewController
 
 @property (nonatomic) MKCoordinateRegion region;
-@property (nonatomic, weak) id<NXPlaceSearchDelegate> delegate;
+@property (nonatomic, weak) id<NxPlacePickedConfirmationDelegate> delegate;
 
 @end

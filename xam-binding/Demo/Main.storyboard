@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfz-Dj-NGN" userLabel="btnPickPlace" misplaced="YES">
+                                <rect key="frame" x="146" y="116" width="83" height="30"/>
+                                <state key="normal" title="Pick a Place"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Place to show here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qP-ud-MVk" userLabel="lblSelectedPlace" misplaced="YES" numberOfLines="0">
+                                <rect key="frame" x="79" y="154" width="217" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6qP-ud-MVk" secondAttribute="trailing" constant="16" id="KXv-hE-bTS"/>
+                            <constraint firstItem="Xfz-Dj-NGN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oia-ac-KHY"/>
+                            <constraint firstItem="Xfz-Dj-NGN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="Qoe-ev-V8G"/>
+                            <constraint firstItem="6qP-ud-MVk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="Whj-bE-PCt"/>
+                            <constraint firstItem="6qP-ud-MVk" firstAttribute="top" secondItem="Xfz-Dj-NGN" secondAttribute="bottom" constant="8" id="acY-os-cId"/>
+                            <constraint firstItem="6qP-ud-MVk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f5v-z0-Q4W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSelectPlace" destination="Xfz-Dj-NGN" id="name-outlet-Xfz-Dj-NGN"/>
+                        <outlet property="lblSelectedPlace" destination="6qP-ud-MVk" id="name-outlet-6qP-ud-MVk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

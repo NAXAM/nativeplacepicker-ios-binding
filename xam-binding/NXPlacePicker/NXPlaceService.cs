@@ -1,5 +1,0 @@
-﻿using ObjCRuntime;
-
-namespace NXPlacePicker
-{
-}

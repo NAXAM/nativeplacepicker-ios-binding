@@ -111,9 +111,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NXPlacePicker\NXPlacePicker.csproj">
+    <ProjectReference Include="..\Naxam.iOS.PlacePicker\Naxam.iOS.PlacePicker.csproj">
       <Project>{1B0370DE-5FE7-4A4C-87CC-4D4D9CE89C76}</Project>
-      <Name>NXPlacePicker</Name>
+      <Name>Naxam.iOS.PlacePicker</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

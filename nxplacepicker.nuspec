@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Naxam.iOS.PlacePicker</id>
+       <version>1.0.0</version>
+        <description>Xamarin.iOS - MapKit - Place Picker</description>
+        <authors>NAXAM CO.,LTD</authors>
+        <owners>NAXAM CO.,LTD</owners>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+
+        <!-- Optional elements -->
+        <title>Naxam - Xamarin.iOS PlacePicker</title>
+        <copyright>Copyright (c) 2017 NAXAM</copyright>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/NAXAM/ios-nativeplacepicker</projectUrl>
+        <tags>Xamarin.iOS, MapKit, PlacePicker</tags>
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+        <!--iOS-->
+        <file src="xam-binding/Naxam.iOS.PlacePicker/bin/Release/Naxam.iOS.PlacePicker.dll" target="lib/Xamarin.iOS10/Naxam.iOS.PlacePicker.dll" />
+        <file src="xam-binding/Naxam.iOS.PlacePicker/bin/Release/Naxam.iOS.PlacePicker.xml" target="lib/Xamarin.iOS10/Naxam.iOS.PlacePicker.xml" />
+    </files>
+</package>

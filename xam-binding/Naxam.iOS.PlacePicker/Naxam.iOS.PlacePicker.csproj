@@ -6,8 +6,8 @@
     <ProjectGuid>{1B0370DE-5FE7-4A4C-87CC-4D4D9CE89C76}</ProjectGuid>
     <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>NXPlacePicker</RootNamespace>
-    <AssemblyName>NXPlacePicker</AssemblyName>
+    <RootNamespace>Naxam.iOS.PlacePicker</RootNamespace>
+    <AssemblyName>Naxam.iOS.PlacePicker</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -26,6 +26,7 @@
     <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Naxam.iOS.PlacePicker.xml</DocumentationFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>

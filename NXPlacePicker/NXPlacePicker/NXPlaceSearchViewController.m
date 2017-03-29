@@ -79,7 +79,7 @@ MKCoordinateRegion *_region;
     MKMapItem *item = results.mapItems[indexPath.row];
     
     cell.textLabel.text = item.name;
-    cell.detailTextLabel.text = item.placemark.addressDictionary[@"Street"];
+    cell.detailTextLabel.text = [item.placemark formattedAddress];
     return cell;
 }
 
@@ -93,13 +93,14 @@ MKCoordinateRegion *_region;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
--(void) didConfirmPlace:(MKPlacemark *)placemark
+-(void) viewController: (UIViewController*) viewController didConfirmPlace:(MKPlacemark *)placemark
 {
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(didConfirmPlace:)])
-    {
-        [self.delegate didConfirmPlace:placemark];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
+    __weak NXPlaceSearchViewController *wSelf = self;
+    [viewController dismissViewControllerAnimated:true
+                                       completion:^{
+                                           [wSelf.delegate viewController:wSelf
+                                                          didConfirmPlace:placemark];
+                                       }];
 }
 
 @end

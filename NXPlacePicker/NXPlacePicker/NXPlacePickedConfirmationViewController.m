@@ -8,14 +8,10 @@
 
 #import "NXPlacePickedConfirmationViewController.h"
 
-
-
 @interface NXPlacePickedConfirmationViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLocationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addressLocationLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
-
 
 @end
 
@@ -26,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.nameLocationLabel.text = self.mkPlacemark.name;
-    self.addressLocationLabel.text = self.mkPlacemark.addressDictionary[@"Street"];
+    self.addressLocationLabel.text = [self.mkPlacemark formattedAddress];
     [self setUpMapView];
 }
 
@@ -51,7 +47,8 @@
     annotation.subtitle = cityAndState;
     [self.mapView addAnnotation:annotation];
     
-    [self.mapView setRegion:MKCoordinateRegionMake(self.mkPlacemark.coordinate, MKCoordinateSpanMake(0.005, 0.005)) animated:true];
+    [self.mapView setRegion:MKCoordinateRegionMake(self.mkPlacemark.coordinate, MKCoordinateSpanMake(0.005, 0.005))
+                   animated:true];
 }
 
 - (IBAction)goBack:(UIButton *)sender {
@@ -59,13 +56,17 @@
 }
 
 - (IBAction)actionSelect:(UIButton *)sender {
-    
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(didConfirmPlace:)])
-    {
-        [self.delegate didConfirmPlace:self.mkPlacemark];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
-    
+    [self.delegate viewController:self
+                  didConfirmPlace:self.mkPlacemark];
+}
+
+@end
+
+@implementation MKPlacemark (Formatter)
+
+- (NSString *)formattedAddress {
+    NSArray *lines = self.addressDictionary[@"FormattedAddressLines"];
+    return [lines componentsJoinedByString:@", "];
 }
 
 @end
