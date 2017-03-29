@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@protocol PopUpUserPlaceDelegate <NSObject>
+@protocol NxPlacePickedConfirmationDelegate <NSObject>
 
 -(void) didConfirmPlace:(MKPlacemark *)placemark;
 
 @end
 
-@interface PopUpUserPlace : UIViewController
+@interface NXPlacePickedConfirmationViewController : UIViewController
 
 @property (nonatomic, strong) MKPlacemark* mkPlacemark;
-@property (nonatomic, weak) id<PopUpUserPlaceDelegate> delegate;
+@property (nonatomic, weak) id<NxPlacePickedConfirmationDelegate> delegate;
 
 @end

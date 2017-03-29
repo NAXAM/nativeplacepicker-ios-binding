@@ -26,10 +26,10 @@
 		011912091E8916D900EB5D42 /* NXPlacePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912021E8916D900EB5D42 /* NXPlacePicker.h */; };
 		0119120A1E8916D900EB5D42 /* NXPlacePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912031E8916D900EB5D42 /* NXPlacePickerViewController.h */; };
 		0119120B1E8916D900EB5D42 /* NXPlacePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011912041E8916D900EB5D42 /* NXPlacePickerViewController.m */; };
-		0119120C1E8916D900EB5D42 /* PopUpUserPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912051E8916D900EB5D42 /* PopUpUserPlace.h */; };
-		0119120D1E8916D900EB5D42 /* PopUpUserPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 011912061E8916D900EB5D42 /* PopUpUserPlace.m */; };
-		0119120E1E8916D900EB5D42 /* SearchPlaceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912071E8916D900EB5D42 /* SearchPlaceViewController.h */; };
-		0119120F1E8916D900EB5D42 /* SearchPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011912081E8916D900EB5D42 /* SearchPlaceViewController.m */; };
+		0119120C1E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912051E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.h */; };
+		0119120D1E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011912061E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.m */; };
+		0119120E1E8916D900EB5D42 /* NXPlaceSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 011912071E8916D900EB5D42 /* NXPlaceSearchViewController.h */; };
+		0119120F1E8916D900EB5D42 /* NXPlaceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011912081E8916D900EB5D42 /* NXPlaceSearchViewController.m */; };
 		011912151E8916ED00EB5D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011912101E8916ED00EB5D42 /* Assets.xcassets */; };
 		011912161E8916ED00EB5D42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011912121E8916ED00EB5D42 /* Main.storyboard */; };
 		011912171E8916ED00EB5D42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 011912141E8916ED00EB5D42 /* Info.plist */; };
@@ -73,10 +73,10 @@
 		011912021E8916D900EB5D42 /* NXPlacePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXPlacePicker.h; path = NXPlacePicker/NXPlacePicker.h; sourceTree = "<group>"; };
 		011912031E8916D900EB5D42 /* NXPlacePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXPlacePickerViewController.h; path = NXPlacePicker/NXPlacePickerViewController.h; sourceTree = "<group>"; };
 		011912041E8916D900EB5D42 /* NXPlacePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXPlacePickerViewController.m; path = NXPlacePicker/NXPlacePickerViewController.m; sourceTree = "<group>"; };
-		011912051E8916D900EB5D42 /* PopUpUserPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopUpUserPlace.h; path = NXPlacePicker/PopUpUserPlace.h; sourceTree = "<group>"; };
-		011912061E8916D900EB5D42 /* PopUpUserPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopUpUserPlace.m; path = NXPlacePicker/PopUpUserPlace.m; sourceTree = "<group>"; };
-		011912071E8916D900EB5D42 /* SearchPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPlaceViewController.h; path = NXPlacePicker/SearchPlaceViewController.h; sourceTree = "<group>"; };
-		011912081E8916D900EB5D42 /* SearchPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPlaceViewController.m; path = NXPlacePicker/SearchPlaceViewController.m; sourceTree = "<group>"; };
+		011912051E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXPlacePickedConfirmationViewController.h; path = NXPlacePicker/NXPlacePickedConfirmationViewController.h; sourceTree = "<group>"; };
+		011912061E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXPlacePickedConfirmationViewController.m; path = NXPlacePicker/NXPlacePickedConfirmationViewController.m; sourceTree = "<group>"; };
+		011912071E8916D900EB5D42 /* NXPlaceSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXPlaceSearchViewController.h; path = NXPlacePicker/NXPlaceSearchViewController.h; sourceTree = "<group>"; };
+		011912081E8916D900EB5D42 /* NXPlaceSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXPlaceSearchViewController.m; path = NXPlacePicker/NXPlaceSearchViewController.m; sourceTree = "<group>"; };
 		011912101E8916ED00EB5D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = NXPlacePicker/Assets.xcassets; sourceTree = "<group>"; };
 		011912131E8916ED00EB5D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		011912141E8916ED00EB5D42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NXPlacePicker/Info.plist; sourceTree = "<group>"; };
@@ -117,10 +117,10 @@
 				011912021E8916D900EB5D42 /* NXPlacePicker.h */,
 				011912031E8916D900EB5D42 /* NXPlacePickerViewController.h */,
 				011912041E8916D900EB5D42 /* NXPlacePickerViewController.m */,
-				011912051E8916D900EB5D42 /* PopUpUserPlace.h */,
-				011912061E8916D900EB5D42 /* PopUpUserPlace.m */,
-				011912071E8916D900EB5D42 /* SearchPlaceViewController.h */,
-				011912081E8916D900EB5D42 /* SearchPlaceViewController.m */,
+				011912051E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.h */,
+				011912061E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.m */,
+				011912071E8916D900EB5D42 /* NXPlaceSearchViewController.h */,
+				011912081E8916D900EB5D42 /* NXPlaceSearchViewController.m */,
 			);
 			path = NXPlacePicker;
 			sourceTree = "<group>";
@@ -173,9 +173,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0119120E1E8916D900EB5D42 /* SearchPlaceViewController.h in Headers */,
+				0119120E1E8916D900EB5D42 /* NXPlaceSearchViewController.h in Headers */,
 				0119120A1E8916D900EB5D42 /* NXPlacePickerViewController.h in Headers */,
-				0119120C1E8916D900EB5D42 /* PopUpUserPlace.h in Headers */,
+				0119120C1E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.h in Headers */,
 				011912091E8916D900EB5D42 /* NXPlacePicker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,9 +314,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0119120D1E8916D900EB5D42 /* PopUpUserPlace.m in Sources */,
+				0119120D1E8916D900EB5D42 /* NXPlacePickedConfirmationViewController.m in Sources */,
 				0119120B1E8916D900EB5D42 /* NXPlacePickerViewController.m in Sources */,
-				0119120F1E8916D900EB5D42 /* SearchPlaceViewController.m in Sources */,
+				0119120F1E8916D900EB5D42 /* NXPlaceSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

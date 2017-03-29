@@ -6,16 +6,16 @@
 //  Copyright © 2017 Vu Tinh. All rights reserved.
 //
 
-#import "SearchPlaceViewController.h"
+#import "NXPlaceSearchViewController.h"
 #import <MapKit/MapKit.h>
-#import "PopUpUserPlace.h"
+#import "NXPlacePickedConfirmationViewController.h"
 
 
-@interface SearchPlaceViewController () <UISearchBarDelegate , PopUpUserPlaceDelegate>
+@interface NXPlaceSearchViewController () <UISearchBarDelegate , NxPlacePickedConfirmationDelegate>
 
 @end
 
-@implementation SearchPlaceViewController
+@implementation NXPlaceSearchViewController
 
 MKLocalSearchResponse *results;
 @synthesize delegate;
@@ -59,18 +59,7 @@ MKCoordinateRegion *_region;
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
         if (error != nil) {
-//            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Map Error",nil)
-//                                        message:[error localizedDescription]
-//                                       delegate:nil
-//                              cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil] show];
-            return;
-        }
-        
-        if ([response.mapItems count] == 0) {
-//            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No Results",nil)
-//                                        message:nil
-//                                       delegate:nil
-//                              cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil] show];
+            //TODO
             return;
         }
         
@@ -97,7 +86,7 @@ MKCoordinateRegion *_region;
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MKPlacemark *item = results.mapItems[indexPath.row].placemark;
-    PopUpUserPlace *vc = (PopUpUserPlace *) [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpUserPlace"];
+    NXPlacePickedConfirmationViewController *vc = (NXPlacePickedConfirmationViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"NXPlacePickedConfirmationViewController"];
     vc.mkPlacemark = item;
     vc.delegate = self;
     vc.modalPresentationStyle = UIModalPresentationCustom;

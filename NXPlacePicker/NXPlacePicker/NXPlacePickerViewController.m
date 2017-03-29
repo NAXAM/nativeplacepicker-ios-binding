@@ -11,8 +11,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "SearchPlaceViewController.h"
-#import "PopUpUserPlace.h"
+#import "NXPlaceSearchViewController.h"
+#import "NXPlacePickedConfirmationViewController.h"
 
 typedef enum {
     DisplayStateFull = 0,
@@ -21,7 +21,7 @@ typedef enum {
 
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
-@interface NXPlacePickerViewController () <UIGestureRecognizerDelegate, SearchPlaceViewControllerDelegate, PopUpUserPlaceDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
+@interface NXPlacePickerViewController () <UIGestureRecognizerDelegate, NXPlaceSearchDelegate, NxPlacePickedConfirmationDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topBottomSheetConstraint;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewNearby;
@@ -115,7 +115,7 @@ CGFloat newTopConstant;
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)goToViewSearchPlace:(UITapGestureRecognizer *)sender {
-    SearchPlaceViewController *vc = (SearchPlaceViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"SearchPlaceViewController"];
+    NXPlaceSearchViewController *vc = (NXPlaceSearchViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"NXPlaceSearchViewController"];
     vc.region = self.mapView.region;
     vc.delegate = self;
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -123,7 +123,7 @@ CGFloat newTopConstant;
 }
 - (IBAction)goToPopUpUserPlace:(UITapGestureRecognizer *)sender {
     if (self.placemarks == NULL){ return;}
-    PopUpUserPlace *vc = (PopUpUserPlace *) [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpUserPlace"];
+    NXPlacePickedConfirmationViewController *vc = (NXPlacePickedConfirmationViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"NXPlacePickedConfirmationViewController"];
     vc.mkPlacemark = self.placemarks[0];
     vc.delegate = self;
     vc.modalPresentationStyle = UIModalPresentationCustom;
@@ -146,7 +146,6 @@ CGFloat newTopConstant;
          {
              
              CLPlacemark *placemark= [placemarks objectAtIndex:0];
-             //             NSString *address = [NSString stringWithFormat:@"%@ %@,%@ %@", [placemark subThoroughfare],[placemark thoroughfare],[placemark locality], [placemark administrativeArea]];
              MKPlacemark * mkPlacemark = [[MKPlacemark alloc] initWithPlacemark:placemark];
              NSMutableArray *array = [[NSMutableArray alloc] init];
              [array addObject:mkPlacemark];
@@ -207,26 +206,6 @@ CGFloat newTopConstant;
 //// MKMapViewDelegate
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    // If it's the user location, just return nil.
-    if ([annotation isKindOfClass:[MKUserLocation class]])
-        return nil;
-    
-    //    // Handle any custom annotations.
-    //    if ([annotation isKindOfClass:[MKPointAnnotation class]])
-    //    {
-    //        // Try to dequeue an existing pin view first.
-    //        MKAnnotationView *pinView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"pin"];
-    //        if (!pinView)
-    //        {
-    //            // If an existing pin view was not available, create one.
-    //            pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pin"];
-    //            //pinView.animatesDrop = YES;
-    //            pinView.canShowCallout = YES;
-    //        } else {
-    //            pinView.annotation = annotation;
-    //        }
-    //        return pinView;
-    //    }
     return nil;
     
 }
@@ -298,8 +277,6 @@ CGFloat newTopConstant;
 
 -(BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
-//    CGFloat velocity = [gestureRecognizer ]
-    
     if ((self.topBottomSheetConstraint.constant <= fullScreenTopConstant && fabs(self.tableViewNearby.contentOffset.y) < 20) || (self.topBottomSheetConstraint.constant >= self.middleTopConstant))
     {
         self.tableViewNearby.scrollEnabled = false;
@@ -328,7 +305,7 @@ CGFloat newTopConstant;
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MKPlacemark *item = self.placemarks[indexPath.row];
-    PopUpUserPlace *vc = (PopUpUserPlace *) [self.storyboard instantiateViewControllerWithIdentifier:@"PopUpUserPlace"];
+    NXPlacePickedConfirmationViewController *vc = (NXPlacePickedConfirmationViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"NXPlacePickedConfirmationViewController"];
     vc.mkPlacemark = item;
     vc.delegate = self;
     vc.modalPresentationStyle = UIModalPresentationCustom;

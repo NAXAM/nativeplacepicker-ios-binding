@@ -6,11 +6,11 @@
 //  Copyright © 2017 Vu Tinh. All rights reserved.
 //
 
-#import "PopUpUserPlace.h"
+#import "NXPlacePickedConfirmationViewController.h"
 
 
 
-@interface PopUpUserPlace ()
+@interface NXPlacePickedConfirmationViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLocationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addressLocationLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation PopUpUserPlace
+@implementation NXPlacePickedConfirmationViewController
 
 @synthesize delegate;
 

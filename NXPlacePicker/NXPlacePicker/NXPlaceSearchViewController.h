@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@protocol SearchPlaceViewControllerDelegate <NSObject>
+@protocol NXPlaceSearchDelegate <NSObject>
 
 @required
 -(void) didConfirmPlace:(MKPlacemark *)placemark;
 
 @end
 
-@interface SearchPlaceViewController : UITableViewController
+@interface NXPlaceSearchViewController : UITableViewController
 
 @property (nonatomic) MKCoordinateRegion region;
-@property (nonatomic, weak) id<SearchPlaceViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<NXPlaceSearchDelegate> delegate;
 
 @end

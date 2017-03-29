@@ -119,18 +119,18 @@
                                                 <rect key="frame" x="0.0" y="72" width="375" height="66"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pwh-Oo-0sT" id="mDp-sJ-I8e">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fqu-hQ-Ufl">
-                                                            <rect key="frame" x="15" y="15" width="34" height="21"/>
+                                                            <rect key="frame" x="15" y="16" width="33.5" height="20.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HCt-3j-BFs">
-                                                            <rect key="frame" x="15" y="36" width="44" height="15"/>
+                                                            <rect key="frame" x="15" y="36.5" width="44" height="14.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
@@ -211,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
-        <!--Search Place View Controller-->
+        <!--Place Search View Controller-->
         <scene sceneID="u3m-8Z-nsK">
             <objects>
-                <tableViewController storyboardIdentifier="SearchPlaceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iyl-v4-fhC" customClass="SearchPlaceViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NXPlaceSearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iyl-v4-fhC" customClass="NXPlaceSearchViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z1m-JR-adA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,18 +224,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jW7-tp-9cS" id="Oiq-P4-CtN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6nQ-eK-tzB">
-                                            <rect key="frame" x="15" y="10" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="11" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nFH-dZ-CpO">
-                                            <rect key="frame" x="15" y="31" width="44" height="15"/>
+                                            <rect key="frame" x="15" y="31.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -280,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="1237.5999999999999" y="123.68815592203899"/>
         </scene>
-        <!--Pop Up User Place-->
+        <!--Place Picked Confirmation View Controller-->
         <scene sceneID="daR-H9-coj">
             <objects>
-                <viewController storyboardIdentifier="PopUpUserPlace" id="W7T-53-nAk" customClass="PopUpUserPlace" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NXPlacePickedConfirmationViewController" id="W7T-53-nAk" customClass="NXPlacePickedConfirmationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oeH-tV-9ZQ"/>
                         <viewControllerLayoutGuide type="bottom" id="xIN-nG-kop"/>
