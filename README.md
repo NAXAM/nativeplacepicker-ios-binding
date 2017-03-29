@@ -1,7 +1,10 @@
 # iOS - MapKit PlacePicker
 iOS PlacePicker using entirely MapKit, CoreLocation
 
-![Picker](./screenshots/picker.png  | width=80) ![Search](./screenshots/search.png  | width=80) ![Confirm](./screenshots/confirm.png  | width=80)
+|          |             |    |
+| ------------- |:-------------:| -----:|
+| ![Picker](./screenshots/picker.png) | ![Search](./screenshots/search.png)| ![Confirm](./screenshots/confirm.png) |
+ 
 
 # Installation
 
