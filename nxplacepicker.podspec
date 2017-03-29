@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NXPlacePicker"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "iOS PlacePicker using entirely MapKit, CoreLocation"
 
   # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = iOS PlacePicker using entirely MapKit and CoreLocation
+  s.description  = "iOS PlacePicker using entirely MapKit and CoreLocation"
 
   s.homepage     = "https://github.com/NAXAM/ios-nativeplacepicker"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -90,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "NXPlacePicker/NXPlacePicker/**/*.{h,m}"
+  s.exclude_files = "xam-binding", "NXPlacePickerQs"
 
   # s.public_header_files = "Classes/**/*.h"
 
