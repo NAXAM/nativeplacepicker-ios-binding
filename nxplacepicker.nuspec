@@ -3,7 +3,7 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.iOS.PlacePicker</id>
-       <version>1.0.0</version>
+       <version>1.0.1</version>
         <description>Xamarin.iOS - MapKit - Place Picker</description>
         <authors>NAXAM CO.,LTD</authors>
         <owners>NAXAM CO.,LTD</owners>
@@ -14,7 +14,7 @@
         <copyright>Copyright (c) 2017 NAXAM</copyright>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/NAXAM/ios-nativeplacepicker</projectUrl>
-        <tags>Xamarin.iOS, MapKit, PlacePicker</tags>
+        <tags>Xamarin.iOS, MapKit, CoreLocation, PlacePicker</tags>
     </metadata>
     <!-- Optional 'files' node -->
     <files>

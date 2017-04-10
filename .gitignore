@@ -42,3 +42,4 @@ Components
 *.xcuserstate
 xcuserdata
 Output
+*.nupkg
